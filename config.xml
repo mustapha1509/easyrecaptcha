@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>easyrecaptcha</name>
+    <displayName><![CDATA[EasyRecaptcha – Google reCAPTCHA v2 & v3]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Protect login, registration, contact, personal information and back-office login forms with Google reCAPTCHA v2/v3, and block e-mails and IP addresses.]]></description>
+    <author><![CDATA[Nasraoui Mustapha]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <confirmUninstall><![CDATA[Uninstalling EasyRecaptcha removes its settings and logs. Your forms will no longer be protected. Continue?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+    <limited_countries></limited_countries>
+</module>
