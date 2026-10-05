@@ -62,15 +62,3 @@ Create an empty file named **`disable.flag`** in `modules/easyrecaptcha/` (FTP o
 - Not supported: reCAPTCHA Enterprise, v2 invisible.
 - Translations: shopper-facing messages are translated to French (`translations/fr.php`); the admin screen is in English.
 
-## What has and has not been tested
-
-I could not test on a live PrestaShop, so:
-
-**Tested** (PHP 8.3 with the PrestaShop classes stubbed, warnings promoted to errors; browser script in jsdom against classic-theme markup): IP/e-mail rules, every Google verdict path, both server guards, admin saving and validation, the front and back-office scripts (v2, v3, lazy, late-rendered forms, blocked Google script, the submit-button-name trap).
-
-**Hook names** were checked against the PrestaShop 8/9 developer documentation: `actionFrontControllerInitBefore`, `actionFrontControllerSetMedia`, `actionAdminLoginControllerBefore`, `actionAdminLoginControllerSetMedia`.
-
-**Please verify on staging** (assumptions about PrestaShop internals I could not run):
-1. After a refused submission the error message is displayed on your theme (the module adds it to the controller's `errors`).
-2. The contact form on `/contact-us` is refused when the token is missing (it relies on the `ps_contactform` widget reading `submitMessage`).
-3. On the back-office login page the widget appears (it is added with `addJS($url, false)`) and a login without it is refused.
